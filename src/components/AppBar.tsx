@@ -7,7 +7,10 @@ import Home from '@mui/icons-material/Home'
 export const AppBar = () => {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<List orientation="horizontal">
+			<List
+				orientation="horizontal"
+				className="gap-6"
+			>
 				<ListItem>
 					<ListItemButton>
 						<Home />
