@@ -1,6 +1,9 @@
 import type { Preview } from '@storybook/react'
 import '../src/index.css'
-import { CssVarsProvider } from '@mui/joy'
+import {
+	CssVarsProvider,
+	StyledEngineProvider,
+} from '@mui/joy'
 import { theme } from '../src/theme'
 
 const preview: Preview = {
@@ -14,9 +17,11 @@ const preview: Preview = {
 	},
 	decorators: [
 		Story => (
-			<CssVarsProvider theme={theme}>
-				<Story />
-			</CssVarsProvider>
+			<StyledEngineProvider injectFirst>
+				<CssVarsProvider theme={theme}>
+					<Story />
+				</CssVarsProvider>
+			</StyledEngineProvider>
 		),
 	],
 }
