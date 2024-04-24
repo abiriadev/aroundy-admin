@@ -4,11 +4,15 @@ import { AppBar } from './AppBar'
 const meta = {
 	component: AppBar,
 	parameters: {
-		layout: 'centered',
+		layout: 'padded',
 	},
 } satisfies Meta<typeof AppBar>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+	args: {
+		selectedMenu: '컨텐츠관리',
+	},
+}

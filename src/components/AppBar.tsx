@@ -1,38 +1,39 @@
-import Box from '@mui/joy/Box'
-import List from '@mui/joy/List'
-import ListItem from '@mui/joy/ListItem'
-import ListItemButton from '@mui/joy/ListItemButton'
-import Home from '@mui/icons-material/Home'
+import { Button, Link, Stack } from '@mui/joy'
 
-export const AppBar = () => {
+const menus = ['컨텐츠관리', '회사관리', '회원']
+
+export interface AppBarProps {
+	selectedMenu?: string
+}
+
+export const AppBar = ({ selectedMenu }: AppBarProps) => {
 	return (
-		<Box sx={{ flexGrow: 1 }}>
-			<List
-				orientation="horizontal"
-				className="gap-6"
+		<Stack
+			direction="row"
+			gap={2}
+			className="p-4"
+			sx={{
+				backgroundColor: 'primary.solidBg',
+			}}
+		>
+			{menus.map((menu, i) => (
+				<Button
+					key={i}
+					variant="solid"
+					size="sm"
+					aria-pressed={selectedMenu === menu}
+				>
+					{menu}
+				</Button>
+			))}
+			<Link
+				component="button"
+				underline="none"
+				className="ml-auto"
+				color="neutral"
 			>
-				<ListItem>
-					<ListItemButton>
-						<Home />
-					</ListItemButton>
-				</ListItem>
-				<ListItem>
-					<ListItemButton>
-						컨텐츠관리
-					</ListItemButton>
-				</ListItem>
-				<ListItem>
-					<ListItemButton>
-						회사관리
-					</ListItemButton>
-				</ListItem>
-				<ListItem>
-					<ListItemButton>CHAT</ListItemButton>
-				</ListItem>
-				<ListItem>
-					<ListItemButton>회원</ListItemButton>
-				</ListItem>
-			</List>
-		</Box>
+				로그아웃
+			</Link>
+		</Stack>
 	)
 }
