@@ -7,6 +7,8 @@ import {
 import { theme } from '../src/theme'
 import { initialize, mswLoader } from 'msw-storybook-addon'
 import { handlers } from '../src/mocks/handlers'
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 
 initialize(
 	{
@@ -26,11 +28,15 @@ export default {
 	},
 	decorators: [
 		Story => (
-			<StyledEngineProvider injectFirst>
-				{/* <CssVarsProvider theme={theme}> */}
-				<Story />
-				{/* </CssVarsProvider> */}
-			</StyledEngineProvider>
+			<LocalizationProvider
+				dateAdapter={AdapterDateFns}
+			>
+				<StyledEngineProvider injectFirst>
+					{/* <CssVarsProvider theme={theme}> */}
+					<Story />
+					{/* </CssVarsProvider> */}
+				</StyledEngineProvider>
+			</LocalizationProvider>
 		),
 	],
 	loaders: [mswLoader],
