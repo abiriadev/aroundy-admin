@@ -84,11 +84,7 @@ const data: Ads[] = [
 	},
 ]
 
-const dateFormatOptions = {
-	year: 'numeric',
-	month: 'long',
-	day: 'numeric',
-}
+// const
 
 export const ArticleTable = () => {
 	return (
@@ -126,7 +122,11 @@ export const ArticleTable = () => {
 							<td>
 								{createdAt.toLocaleDateString(
 									'ko-KR',
-									dateFormatOptions,
+									{
+										year: 'numeric',
+										month: 'long',
+										day: 'numeric',
+									},
 								)}
 							</td>
 							<td>{likes}</td>
