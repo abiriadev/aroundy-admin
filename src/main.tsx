@@ -1,14 +1,8 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import {
-	CssVarsProvider,
-	StyledEngineProvider,
-} from '@mui/joy'
-import { theme } from './theme'
 import { StrictMode } from 'react'
-import { LocalizationProvider } from '@mui/x-date-pickers'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
+import { Providers } from './Providers.tsx'
 
 async function enableMocking() {
 	if (process.env.NODE_ENV !== 'development') return
@@ -26,12 +20,8 @@ ReactDOM.createRoot(
 	document.getElementById('root')!,
 ).render(
 	<StrictMode>
-		<LocalizationProvider dateAdapter={AdapterDateFns}>
-			<StyledEngineProvider injectFirst>
-				<CssVarsProvider theme={theme}>
-					<App />
-				</CssVarsProvider>
-			</StyledEngineProvider>
-		</LocalizationProvider>
+		<Providers>
+			<App />
+		</Providers>
 	</StrictMode>,
 )
