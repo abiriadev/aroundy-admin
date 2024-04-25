@@ -26,8 +26,10 @@ export const SelectCategories = () => {
 			placeholder="카테고리"
 			indicator={<KeyboardArrowDown />}
 		>
-			{categories.map(({ label, value }) => (
-				<Option value={value}>{label}</Option>
+			{categories.map(({ label, value }, i) => (
+				<Option key={i} value={value}>
+					{label}
+				</Option>
 			))}
 		</Select>
 	)
