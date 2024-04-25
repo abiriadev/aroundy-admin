@@ -1,6 +1,11 @@
 import { Button, Link, Stack } from '@mui/joy'
+import { Link as RrdLink } from 'react-router-dom'
 
-const menus = ['컨텐츠관리', '회사관리', '회원']
+const menus = [
+	{ name: '컨텐츠관리', path: '/' },
+	{ name: '회사관리', path: '/companies' },
+	{ name: '회원', path: '/accounts' },
+]
 
 export interface AppBarProps {
 	selectedMenu?: string
@@ -21,9 +26,13 @@ export const AppBar = ({ selectedMenu }: AppBarProps) => {
 					key={i}
 					variant="solid"
 					size="sm"
-					aria-pressed={selectedMenu === menu}
+					component={RrdLink}
+					to={menu.path}
+					aria-pressed={
+						selectedMenu === menu.name
+					}
 				>
-					{menu}
+					{menu.name}
 				</Button>
 			))}
 			<Link
