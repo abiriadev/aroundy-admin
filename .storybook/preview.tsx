@@ -8,7 +8,7 @@ import { theme } from '../src/theme'
 import { initialize, mswLoader } from 'msw-storybook-addon'
 import { handlers } from '../src/mocks/handlers'
 import { LocalizationProvider } from '@mui/x-date-pickers'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
 
 initialize(
 	{

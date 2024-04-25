@@ -8,7 +8,7 @@ import {
 import { theme } from './theme'
 import { StrictMode } from 'react'
 import { LocalizationProvider } from '@mui/x-date-pickers'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
 
 async function enableMocking() {
 	if (process.env.NODE_ENV !== 'development') return
