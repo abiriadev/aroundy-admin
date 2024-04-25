@@ -5,8 +5,17 @@ import {
 	StyledEngineProvider,
 } from '@mui/joy'
 import { theme } from '../src/theme'
+import { initialize, mswLoader } from 'msw-storybook-addon'
+import { handlers } from '../src/mocks/handlers'
 
-const preview: Preview = {
+initialize(
+	{
+		onUnhandledRequest: 'bypass',
+	},
+	handlers,
+)
+
+export default {
 	parameters: {
 		controls: {
 			matchers: {
@@ -18,12 +27,11 @@ const preview: Preview = {
 	decorators: [
 		Story => (
 			<StyledEngineProvider injectFirst>
-				<CssVarsProvider theme={theme}>
-					<Story />
-				</CssVarsProvider>
+				{/* <CssVarsProvider theme={theme}> */}
+				<Story />
+				{/* </CssVarsProvider> */}
 			</StyledEngineProvider>
 		),
 	],
-}
-
-export default preview
+	loaders: [mswLoader],
+} satisfies Preview
