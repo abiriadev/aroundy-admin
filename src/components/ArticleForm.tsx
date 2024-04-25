@@ -1,17 +1,15 @@
-import { KeyboardArrowDown } from '@mui/icons-material'
 import {
 	FormControl,
 	FormLabel,
 	Input,
 	Box,
-	Select,
-	Option,
 } from '@mui/joy'
 import { InputCaption } from './InputCaption'
 import { SelectCompanies } from './SelectCompanies'
 import { SelectTags } from './SelectTags'
 import { DateTimePicker } from '@mui/x-date-pickers'
 import { EventChannel } from './EventChannel'
+import { SelectCategories } from './SelectCategories'
 
 export const ArticleForm = () => {
 	return (
@@ -29,13 +27,7 @@ export const ArticleForm = () => {
 
 				<FormLabel>카테고리</FormLabel>
 				<FormControl>
-					<Select
-						placeholder="카테고리"
-						indicator={<KeyboardArrowDown />}
-					>
-						<Option value="dog">Dog</Option>
-						<Option value="cat">Cat</Option>
-					</Select>
+					<SelectCategories />
 				</FormControl>
 
 				<FormLabel>기업</FormLabel>
