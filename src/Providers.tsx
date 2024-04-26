@@ -1,4 +1,8 @@
-import { PropsWithChildren } from 'react'
+import {
+	Component,
+	ElementType,
+	PropsWithChildren,
+} from 'react'
 import {
 	Experimental_CssVarsProvider as MaterialCssVarsProvider,
 	THEME_ID as MATERIAL_THEME_ID,
@@ -32,3 +36,9 @@ export const Providers = ({
 		</LocalizationProvider>
 	)
 }
+
+export const providersDecorator = (Child: ElementType) => (
+	<Providers>
+		<Child />
+	</Providers>
+)

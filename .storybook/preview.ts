@@ -1,8 +1,8 @@
 import type { Preview } from '@storybook/react'
 import '../src/index.css'
 import { initialize, mswLoader } from 'msw-storybook-addon'
-import { handlers } from '../src/mocks/handlers'
-import { Providers } from '../src/Providers.tsx'
+import { handlers } from '../src/mocks/handlers.ts'
+import { providersDecorator } from '../src/Providers.tsx'
 import { withRouter } from 'storybook-addon-remix-react-router'
 
 initialize(
@@ -21,13 +21,6 @@ export default {
 			},
 		},
 	},
-	decorators: [
-		Story => (
-			<Providers>
-				<Story />
-			</Providers>
-		),
-		withRouter,
-	],
+	decorators: [providersDecorator, withRouter],
 	loaders: [mswLoader],
 } satisfies Preview
