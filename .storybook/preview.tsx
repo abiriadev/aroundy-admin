@@ -3,6 +3,7 @@ import '../src/index.css'
 import { initialize, mswLoader } from 'msw-storybook-addon'
 import { handlers } from '../src/mocks/handlers'
 import { Providers } from '../src/Providers.tsx'
+import { withRouter } from 'storybook-addon-remix-react-router'
 
 initialize(
 	{
@@ -26,6 +27,7 @@ export default {
 				<Story />
 			</Providers>
 		),
+		withRouter,
 	],
 	loaders: [mswLoader],
 } satisfies Preview
