@@ -30,7 +30,7 @@ const NavButton = ({
 	</NavLink>
 )
 
-export const AppBar = ({ selectedMenu }: AppBarProps) => {
+export const AppBar = () => {
 	return (
 		<Stack direction="row" gap={2} className="p-4">
 			<Logo width={32} height={32} />
