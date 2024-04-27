@@ -11,8 +11,4 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
-	args: {
-		selectedMenu: '컨텐츠관리',
-	},
-}
+export const Primary: Story = {}

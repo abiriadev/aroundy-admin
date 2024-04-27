@@ -1,5 +1,7 @@
-import { Button, Link, Stack } from '@mui/joy'
-import { Link as RrdLink } from 'react-router-dom'
+import { Button, Link, Stack, Typography } from '@mui/joy'
+import { PropsWithChildren } from 'react'
+import { NavLink } from 'react-router-dom'
+import Logo from '../assets/primary.svg?react'
 
 const menus = [
 	{ name: '컨텐츠관리', path: '/' },
@@ -11,29 +13,37 @@ export interface AppBarProps {
 	selectedMenu?: string
 }
 
+const NavButton = ({
+	to,
+	children,
+}: PropsWithChildren<{ to: string }>) => (
+	<NavLink to={to}>
+		{({ isActive }) => (
+			<Button
+				variant={isActive ? 'soft' : 'plain'}
+				size="sm"
+				color={isActive ? 'primary' : 'neutral'}
+			>
+				{children}
+			</Button>
+		)}
+	</NavLink>
+)
+
 export const AppBar = ({ selectedMenu }: AppBarProps) => {
 	return (
-		<Stack
-			direction="row"
-			gap={2}
-			className="p-4"
-			sx={{
-				backgroundColor: 'primary.solidBg',
-			}}
-		>
+		<Stack direction="row" gap={2} className="p-4">
+			<Logo width={32} height={32} />
+			<Typography
+				level="h1"
+				className="text-2xl mr-4"
+			>
+				Admin
+			</Typography>
 			{menus.map((menu, i) => (
-				<Button
-					key={i}
-					variant="solid"
-					size="sm"
-					component={RrdLink}
-					to={menu.path}
-					aria-pressed={
-						selectedMenu === menu.name
-					}
-				>
+				<NavButton key={i} to={menu.path}>
 					{menu.name}
-				</Button>
+				</NavButton>
 			))}
 			<Link
 				component="button"
