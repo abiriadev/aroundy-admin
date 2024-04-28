@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 
 export const LoginForm = () => {
 	return (
-		<Card className="shadow-sm">
+		<Card className="shadow">
 			<Typography
 				level="h2"
 				className="p-4 text-2xl font-semibold"
