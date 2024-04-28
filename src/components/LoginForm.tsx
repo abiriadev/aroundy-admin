@@ -28,7 +28,12 @@ export const LoginForm = () => {
 						/>
 					</FormControl>
 					<Button>
-						<Link to="/">로그인</Link>
+						<Link
+							to="/"
+							className="no-underline text-inherit"
+						>
+							로그인
+						</Link>
 					</Button>
 				</Stack>
 			</form>
