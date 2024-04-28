@@ -7,11 +7,7 @@ export const Layout = () => {
 		<Stack>
 			<AppBar />
 			<Box className="p-8 mt-10"></Box>
-			<Grid
-				container
-				spacing={3}
-				sx={{ flexGrow: 1 }}
-			>
+			<Grid container spacing={3}>
 				<Grid xs></Grid>
 				<Grid xs={11}>
 					<Outlet />
