@@ -401,4 +401,7 @@ export const companies: Array<Company> = [
 		name: '에프엔씨인베스트먼트',
 		logo: 'https://www.hankyung.com/data/service/geeks/logo/226ff20fc977a24bad5f1a6bd9f943ab.jpg',
 	},
-]
+].map((company, index) => ({
+	...company,
+	id: index.toString(),
+}))
