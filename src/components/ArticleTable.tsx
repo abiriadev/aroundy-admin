@@ -72,9 +72,22 @@ export const ArticleTable = () => {
 						likes,
 						views,
 					}) => (
-						<tr key={id}>
+						<tr
+							key={id}
+							// className="text-nowrap"
+						>
 							<td>{category}</td>
-							<td>{company.name}</td>
+							<td>
+								<div className="flex items-center gap-2">
+									<img
+										src={company.logo}
+										height={20}
+									/>
+									<span>
+										{company.name}
+									</span>
+								</div>
+							</td>
 							<td>
 								<Chip color="warning">
 									{type}
