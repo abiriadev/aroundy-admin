@@ -1,6 +1,6 @@
 import { Button, Link, Stack, Typography } from '@mui/joy'
 import { PropsWithChildren } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link as RrdLink } from 'react-router-dom'
 import Logo from '../assets/primary.svg?react'
 
 const menus = [
@@ -9,9 +9,7 @@ const menus = [
 	{ name: '회원', path: '/accounts' },
 ]
 
-export interface AppBarProps {
-	selectedMenu?: string
-}
+export interface AppBarProps {}
 
 const NavButton = ({
 	to,
@@ -32,14 +30,25 @@ const NavButton = ({
 
 export const AppBar = () => {
 	return (
-		<Stack direction="row" gap={2} className="p-4">
-			<Logo width={32} height={32} />
-			<Typography
-				level="h1"
-				className="text-2xl mr-4"
+		<Stack
+			direction="row"
+			gap={2}
+			className="p-4"
+			alignItems="center"
+		>
+			<Stack
+				direction="row"
+				gap={2}
+				alignItems="center"
+				className="mr-4 no-underline"
+				component={RrdLink}
+				to="/"
 			>
-				Admin
-			</Typography>
+				<Logo width={32} height={32} />
+				<Typography level="h1" className="text-2xl">
+					Admin
+				</Typography>
+			</Stack>
 			{menus.map((menu, i) => (
 				<NavButton key={i} to={menu.path}>
 					{menu.name}
