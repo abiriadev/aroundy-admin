@@ -1,5 +1,10 @@
 import { AccountsTable } from '../components/AccountsTable'
+import { InfoTable } from '../components/InfoTable'
 
 export const AccountsPage = () => {
-	return <AccountsTable />
+	return (
+		<InfoTable>
+			<AccountsTable />
+		</InfoTable>
+	)
 }
