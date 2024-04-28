@@ -24,7 +24,8 @@ export const Pagination = ({
 			justifyContent="space-between"
 		>
 			<Button
-				variant="plain"
+				variant="outlined"
+				color="neutral"
 				startDecorator={<NavigateBeforeRounded />}
 			>
 				이전
@@ -33,6 +34,11 @@ export const Pagination = ({
 				{range(start, end).map((page, i) => (
 					<Button
 						key={i}
+						color={
+							page === current
+								? 'primary'
+								: 'neutral'
+						}
 						variant={
 							page === current
 								? 'solid'
@@ -44,7 +50,8 @@ export const Pagination = ({
 				))}
 			</Stack>
 			<Button
-				variant="plain"
+				variant="outlined"
+				color="neutral"
 				endDecorator={<NavigateNextRounded />}
 			>
 				다음
