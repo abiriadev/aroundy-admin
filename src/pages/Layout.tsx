@@ -1,12 +1,23 @@
-import { Stack } from '@mui/joy'
+import { Box, Grid, Stack } from '@mui/joy'
 import { AppBar } from '../components/AppBar'
-import { PropsWithChildren } from 'react'
+import { Outlet } from 'react-router-dom'
 
-export const Layout = ({ children }: PropsWithChildren) => {
+export const Layout = () => {
 	return (
 		<Stack>
 			<AppBar />
-			{children}
+			<Box className="p-8 mt-10"></Box>
+			<Grid
+				container
+				spacing={3}
+				sx={{ flexGrow: 1 }}
+			>
+				<Grid xs></Grid>
+				<Grid xs={11}>
+					<Outlet />
+				</Grid>
+				<Grid xs></Grid>
+			</Grid>
 		</Stack>
 	)
 }
