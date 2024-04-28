@@ -1,6 +1,7 @@
-import { Button, Chip, Table } from '@mui/joy'
+import { Button, Chip, IconButton, Table } from '@mui/joy'
 import { useEffect, useState } from 'react'
 import { Company, fetchCompanies } from '../apis'
+import { DeleteOutlineRounded } from '@mui/icons-material'
 
 export const CompaniesTable = () => {
 	const [companies, setCompanies] = useState<
@@ -21,7 +22,7 @@ export const CompaniesTable = () => {
 					<th style={{ width: '30%' }}>기업명</th>
 					<th>로고</th>
 					<th>상태</th>
-					<th>삭제</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -37,9 +38,9 @@ export const CompaniesTable = () => {
 							</Chip>
 						</td>
 						<td>
-							<Button color="danger">
-								삭제
-							</Button>
+							<IconButton color="danger">
+								<DeleteOutlineRounded />
+							</IconButton>
 						</td>
 					</tr>
 				))}

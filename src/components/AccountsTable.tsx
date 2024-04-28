@@ -1,4 +1,5 @@
-import { Button, Table } from '@mui/joy'
+import { DeleteOutlineRounded } from '@mui/icons-material'
+import { Button, IconButton, Table } from '@mui/joy'
 
 export interface Account {
 	name: string
@@ -24,7 +25,7 @@ export const AccountsTable = () => {
 					<th>생년월일</th>
 					<th>가입일</th>
 					<th>최근 로그인 날짜</th>
-					<th>삭제</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -70,9 +71,9 @@ export const AccountsTable = () => {
 								)}
 							</td>
 							<td>
-								<Button color="danger">
-									삭제
-								</Button>
+								<IconButton color="danger">
+									<DeleteOutlineRounded />
+								</IconButton>
 							</td>
 						</tr>
 					),
