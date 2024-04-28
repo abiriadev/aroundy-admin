@@ -9,7 +9,7 @@ export const Layout = () => {
 			<Box className="p-8 mt-10"></Box>
 			<Grid container spacing={3}>
 				<Grid xs></Grid>
-				<Grid xs={11}>
+				<Grid xs={10}>
 					<Outlet />
 				</Grid>
 				<Grid xs></Grid>

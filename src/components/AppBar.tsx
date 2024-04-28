@@ -38,7 +38,7 @@ export const AppBar = () => {
 	return (
 		<Grid container spacing={3} className="shadow">
 			<Grid xs></Grid>
-			<Grid xs={11} className="px-0 pb-0">
+			<Grid xs={10} className="px-0 pb-0">
 				<Stack
 					direction="row"
 					gap={2}
