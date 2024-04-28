@@ -1,4 +1,4 @@
-import { Button, IconButton, Table } from '@mui/joy'
+import { Button, Chip, IconButton, Table } from '@mui/joy'
 import { DeleteOutlineRounded } from '@mui/icons-material'
 import { companies } from '../mocks/data'
 import { formatDateKo } from '../utils'
@@ -79,12 +79,13 @@ export const ArticleTable = () => {
 							<td>{title}</td>
 							<td>{location}</td>
 							<td>
-								{tags
-									.map(
-										({ displayName }) =>
-											displayName,
-									)
-									.join(', ')}
+								{tags.map(
+									({ displayName }) => (
+										<Chip>
+											{displayName}
+										</Chip>
+									),
+								)}
 							</td>
 							<td>{likes}</td>
 							<td>{views}</td>
@@ -130,7 +131,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 10,
 		views: 100,
 	},
@@ -149,7 +155,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 53,
 		views: 300,
 	},
@@ -168,7 +179,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 39,
 		views: 848,
 	},
@@ -187,7 +203,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 10,
 		views: 100,
 	},
@@ -206,7 +227,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 53,
 		views: 300,
 	},
@@ -225,7 +251,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 39,
 		views: 848,
 	},
@@ -244,7 +275,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 10,
 		views: 100,
 	},
@@ -263,7 +299,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 53,
 		views: 300,
 	},
@@ -282,7 +323,12 @@ const data: Ads[] = [
 		startsAt: new Date('2021-09-01'),
 		endsAt: new Date('2021-09-01'),
 		link: 'https://example.com',
-		tags: [],
+		tags: [
+			{
+				id: '1',
+				displayName: '코로나19',
+			},
+		],
 		likes: 39,
 		views: 848,
 	},
