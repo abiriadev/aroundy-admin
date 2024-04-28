@@ -55,10 +55,11 @@ export const AppBar = () => {
 				</NavButton>
 			))}
 			<Link
-				component="button"
+				component={RrdLink}
 				underline="none"
 				className="ml-auto"
 				color="neutral"
+				to="/login"
 			>
 				로그아웃
 			</Link>

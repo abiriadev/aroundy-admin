@@ -6,6 +6,7 @@ import {
 	Input,
 	Stack,
 } from '@mui/joy'
+import { Link } from 'react-router-dom'
 
 export const LoginForm = () => {
 	return (
@@ -26,7 +27,9 @@ export const LoginForm = () => {
 							placeholder="1234"
 						/>
 					</FormControl>
-					<Button>로그인</Button>
+					<Button>
+						<Link to="/">로그인</Link>
+					</Button>
 				</Stack>
 			</form>
 		</Card>

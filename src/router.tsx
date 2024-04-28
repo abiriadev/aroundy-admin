@@ -3,6 +3,7 @@ import { ArticlesPage } from './pages/ArticlesPage'
 import { CompaniesPage } from './pages/CompaniesPage'
 import { AccountsPage } from './pages/AccountsPage'
 import { Layout } from './pages/Layout'
+import { LoginPage } from './pages/LoginPage'
 
 export const router = createBrowserRouter([
 	{
@@ -23,4 +24,8 @@ export const router = createBrowserRouter([
 			},
 		],
 	},
+	{
+		path: '/login',
+		element: <LoginPage />
+	}
 ])
