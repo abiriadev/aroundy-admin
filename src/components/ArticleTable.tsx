@@ -1,4 +1,5 @@
-import { Button, Table } from '@mui/joy'
+import { Button, IconButton, Table } from '@mui/joy'
+import { DeleteOutlineRounded } from '@mui/icons-material'
 
 interface Ads {
 	title: string
@@ -84,8 +85,6 @@ const data: Ads[] = [
 	},
 ]
 
-// const
-
 export const ArticleTable = () => {
 	return (
 		<Table>
@@ -99,7 +98,7 @@ export const ArticleTable = () => {
 					<th>작성일</th>
 					<th>좋아요</th>
 					<th>조회수</th>
-					<th>삭제</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -132,9 +131,9 @@ export const ArticleTable = () => {
 							<td>{likes}</td>
 							<td>{views}</td>
 							<td>
-								<Button color="danger">
-									삭제
-								</Button>
+								<IconButton color="danger">
+									<DeleteOutlineRounded />
+								</IconButton>
 							</td>
 						</tr>
 					),
