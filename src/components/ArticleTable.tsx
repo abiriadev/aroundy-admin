@@ -75,7 +75,11 @@ export const ArticleTable = () => {
 						<tr key={id}>
 							<td>{category}</td>
 							<td>{company.name}</td>
-							<td>{type}</td>
+							<td>
+								<Chip color="warning">
+									{type}
+								</Chip>
+							</td>
 							<td>{title}</td>
 							<td>{location}</td>
 							<td>
