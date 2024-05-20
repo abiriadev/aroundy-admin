@@ -3,7 +3,7 @@ import { InfoTable } from '../components/InfoTable'
 
 export const ArticlesPage = () => {
 	return (
-		<InfoTable>
+		<InfoTable buttonLink="/articles/new">
 			<ArticleTable />
 		</InfoTable>
 	)
