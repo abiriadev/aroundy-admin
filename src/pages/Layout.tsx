@@ -14,6 +14,7 @@ export const Layout = () => {
 				</Grid>
 				<Grid xs></Grid>
 			</Grid>
+			<Box className="p-8 mt-10"></Box>
 		</Stack>
 	)
 }
