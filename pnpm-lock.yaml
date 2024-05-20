@@ -29,6 +29,24 @@ importers:
       '@mui/x-date-pickers':
         specifier: ^7.2.0
         version: 7.2.0(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0))(@mui/material@5.15.15(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.2.79)(date-fns@3.6.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@rpldy/upload-button':
+        specifier: ^1.8.1
+        version: 1.8.1(react@18.2.0)
+      '@rpldy/upload-drop-zone':
+        specifier: ^1.8.1
+        version: 1.8.1(react@18.2.0)
+      '@rpldy/upload-paste':
+        specifier: ^1.8.1
+        version: 1.8.1(react@18.2.0)
+      '@rpldy/upload-preview':
+        specifier: ^1.8.1
+        version: 1.8.1(react@18.2.0)
+      '@rpldy/uploady':
+        specifier: ^1.8.1
+        version: 1.8.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
@@ -1397,6 +1415,58 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rpldy/abort@1.8.1':
+    resolution: {integrity: sha512-EDRsCJfiT0NDROrbuyPmPEHwMErOp2MYodtXT6OiO8qfA3I2NsO1KUvr7OIwCDoN1p/ZLok1Npi9jenoh7g+UQ==}
+
+  '@rpldy/life-events@1.8.1':
+    resolution: {integrity: sha512-wC+sIpjJCNC6T5eyrqKcT7nmQig2sbCGOJAQA7IX2HI96hUKk/g2UQQESXKaGE5D3YwXLH0ocNXTu/kx6JCnxg==}
+
+  '@rpldy/raw-uploader@1.8.1':
+    resolution: {integrity: sha512-K7wouZTkNS8mEps4OlxFpmMRHGzZ5Pq0s0pVFbpER0iwFsth8oS7Dccd1pikzCIqJ5Bbk10sKSdsqrvMiJ4HAA==}
+
+  '@rpldy/sender@1.8.1':
+    resolution: {integrity: sha512-zkiIPLw6fYp5UundEq6UksXKpqoOGfDtFvRLZnP0IpZD3fqcj88j6+PLO5ewEPazP5+ZGNK7FFRGzUw6RKi+xw==}
+
+  '@rpldy/shared-ui@1.8.1':
+    resolution: {integrity: sha512-/tnCArAlkaL1p0Oj9So8Ja4XJbbDc8GZ9RUCRhCx5XMEH/1ZUnbQafhDD19/UMH3DIZ2YWGNbM4Klhdz5ax75g==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@rpldy/shared@1.8.1':
+    resolution: {integrity: sha512-Cf5rhMbeS5SzyXO15b6wO97+6/11ZedWY4nMIspCJIjKpQJ+JY2boYfWqCkDDe9kTZdCwcZvcHlNqwN2t0k1sg==}
+
+  '@rpldy/simple-state@1.8.1':
+    resolution: {integrity: sha512-LwYAyoxxpXD4sSzsGnEDe9+NzI00ngNnCE3COHMJMSlt2Z7NiI2/8KnqFQORnbiBoOm7hVRB6vaGQPly4VeFUQ==}
+
+  '@rpldy/upload-button@1.8.1':
+    resolution: {integrity: sha512-WvK59VKMXNee1+2abSI5/AvW9NoCs20lhcOfusR4gjuUIK80XgGMmXrKYWn1IwmXCIOCcBlPJ6LgffhPEsMPmQ==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@rpldy/upload-drop-zone@1.8.1':
+    resolution: {integrity: sha512-9/qfUtLu7/yO+aZqmt2xrjxg56rCaJtFN64V8FcYAuTaU/y+5jCEYIYLcLrs8MelPgDN/rQHxka1ovdSktFajQ==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@rpldy/upload-paste@1.8.1':
+    resolution: {integrity: sha512-8nrxFmok6MpOYMNK8ZJwI1yrZkgHGo6MvBC9RLRAk8q5k9bBPudHiM/tXKbcVhUJ8YCT1x0MKH4SEqRhZSqwtQ==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@rpldy/upload-preview@1.8.1':
+    resolution: {integrity: sha512-wzyro8dWz0H2MSYfHADs4H5RiAIJunMP0njaGm9IZxbwadsjPLOHyHir/QZelGMhVSXT2Sen6u5FRcWpE+vVMQ==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@rpldy/uploader@1.8.1':
+    resolution: {integrity: sha512-VcbwAm5wbFlnx7b64OqO644xZlOeAnsS6k+AdPHjyKUn9sVwmfwMFj/xsX/RZNKRnpmjn8ofmJtmYBVRo+8rUw==}
+
+  '@rpldy/uploady@1.8.1':
+    resolution: {integrity: sha512-sOu1ZfQLGhtlH9TDpWUR9hpedVO4XoJk4DFFQbEXKr0NB6TvIyjace1gyelf9JXiViAKDYkza2lv/oOZBhTSng==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
@@ -2338,8 +2408,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  clsx@2.1.0:
-    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
 
   color-convert@1.9.3:
@@ -3003,6 +3073,9 @@ packages:
   hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
 
+  html-dir-content@0.3.2:
+    resolution: {integrity: sha512-a1EJZbvBGmmFwk9VxFhEgaHkyXUXKTkw0jr0FCvXKCqgzO1H0wbFQbbzRA6FhR3twxAyjqVc80bzGHEmKrYsSw==}
+
   html-tags@3.3.1:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
@@ -3051,6 +3124,9 @@ packages:
   internal-slot@1.0.7:
     resolution: {integrity: sha512-NGnrKwXzSms2qUUih/ILZ5JBqNTSa1+ZmP6flaIp6KmSElgE9qdndzS3cqjrDovwFdmwsGsLdeFgB6suw+1e9g==}
     engines: {node: '>= 0.4'}
+
+  invariant@2.2.4:
+    resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
 
   ip@2.0.1:
     resolution: {integrity: sha512-lJUL9imLTNi1ZfXT+DU6rBBdbiKGBuay9B6xGSPVjUeQwaH1RIGqef8RZkUtHioLmSNpPR5M4HVKJGm1j8FWVQ==}
@@ -3281,6 +3357,9 @@ packages:
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
+  just-throttle@4.2.0:
+    resolution: {integrity: sha512-/iAZv1953JcExpvsywaPKjSzfTiCLqeguUTE6+VmK15mOcwxBx7/FHrVvS4WEErMR03TRazH8kcBSHqMagYIYg==}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -5740,7 +5819,7 @@ snapshots:
       '@mui/types': 7.2.14(@types/react@18.2.79)
       '@mui/utils': 5.15.14(@types/react@18.2.79)(react@18.2.0)
       '@popperjs/core': 2.11.8
-      clsx: 2.1.0
+      clsx: 2.1.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5765,7 +5844,7 @@ snapshots:
       '@mui/system': 5.15.15(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0)
       '@mui/types': 7.2.14(@types/react@18.2.79)
       '@mui/utils': 5.15.14(@types/react@18.2.79)(react@18.2.0)
-      clsx: 2.1.0
+      clsx: 2.1.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5783,7 +5862,7 @@ snapshots:
       '@mui/types': 7.2.14(@types/react@18.2.79)
       '@mui/utils': 5.15.14(@types/react@18.2.79)(react@18.2.0)
       '@types/react-transition-group': 4.4.10
-      clsx: 2.1.0
+      clsx: 2.1.1
       csstype: 3.1.3
       prop-types: 15.8.1
       react: 18.2.0
@@ -5822,7 +5901,7 @@ snapshots:
       '@mui/styled-engine': 5.15.14(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0)
       '@mui/types': 7.2.14(@types/react@18.2.79)
       '@mui/utils': 5.15.14(@types/react@18.2.79)(react@18.2.0)
-      clsx: 2.1.0
+      clsx: 2.1.1
       csstype: 3.1.3
       prop-types: 15.8.1
       react: 18.2.0
@@ -5853,7 +5932,7 @@ snapshots:
       '@mui/system': 5.15.15(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0))(@types/react@18.2.79)(react@18.2.0)
       '@mui/utils': 5.15.14(@types/react@18.2.79)(react@18.2.0)
       '@types/react-transition-group': 4.4.10
-      clsx: 2.1.0
+      clsx: 2.1.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5969,6 +6048,80 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.14.3':
     optional: true
+
+  '@rpldy/abort@1.8.1':
+    dependencies:
+      '@rpldy/raw-uploader': 1.8.1
+      '@rpldy/shared': 1.8.1
+      '@rpldy/simple-state': 1.8.1
+
+  '@rpldy/life-events@1.8.1':
+    dependencies:
+      '@rpldy/shared': 1.8.1
+
+  '@rpldy/raw-uploader@1.8.1':
+    dependencies:
+      '@rpldy/life-events': 1.8.1
+      '@rpldy/shared': 1.8.1
+
+  '@rpldy/sender@1.8.1':
+    dependencies:
+      '@rpldy/shared': 1.8.1
+
+  '@rpldy/shared-ui@1.8.1(react@18.2.0)':
+    dependencies:
+      '@rpldy/shared': 1.8.1
+      '@rpldy/uploader': 1.8.1
+      react: 18.2.0
+
+  '@rpldy/shared@1.8.1':
+    dependencies:
+      invariant: 2.2.4
+      just-throttle: 4.2.0
+
+  '@rpldy/simple-state@1.8.1':
+    dependencies:
+      '@rpldy/shared': 1.8.1
+
+  '@rpldy/upload-button@1.8.1(react@18.2.0)':
+    dependencies:
+      '@rpldy/shared-ui': 1.8.1(react@18.2.0)
+      react: 18.2.0
+
+  '@rpldy/upload-drop-zone@1.8.1(react@18.2.0)':
+    dependencies:
+      '@rpldy/shared-ui': 1.8.1(react@18.2.0)
+      html-dir-content: 0.3.2
+      react: 18.2.0
+
+  '@rpldy/upload-paste@1.8.1(react@18.2.0)':
+    dependencies:
+      '@rpldy/shared-ui': 1.8.1(react@18.2.0)
+      react: 18.2.0
+
+  '@rpldy/upload-preview@1.8.1(react@18.2.0)':
+    dependencies:
+      '@rpldy/shared': 1.8.1
+      '@rpldy/shared-ui': 1.8.1(react@18.2.0)
+      react: 18.2.0
+
+  '@rpldy/uploader@1.8.1':
+    dependencies:
+      '@rpldy/abort': 1.8.1
+      '@rpldy/life-events': 1.8.1
+      '@rpldy/raw-uploader': 1.8.1
+      '@rpldy/sender': 1.8.1
+      '@rpldy/shared': 1.8.1
+      '@rpldy/simple-state': 1.8.1
+
+  '@rpldy/uploady@1.8.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@rpldy/life-events': 1.8.1
+      '@rpldy/shared': 1.8.1
+      '@rpldy/shared-ui': 1.8.1(react@18.2.0)
+      '@rpldy/uploader': 1.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -7378,7 +7531,7 @@ snapshots:
 
   clone@1.0.4: {}
 
-  clsx@2.1.0: {}
+  clsx@2.1.1: {}
 
   color-convert@1.9.3:
     dependencies:
@@ -8148,6 +8301,8 @@ snapshots:
 
   hosted-git-info@2.8.9: {}
 
+  html-dir-content@0.3.2: {}
+
   html-tags@3.3.1: {}
 
   http-errors@2.0.0:
@@ -8191,6 +8346,10 @@ snapshots:
       es-errors: 1.3.0
       hasown: 2.0.2
       side-channel: 1.0.6
+
+  invariant@2.2.4:
+    dependencies:
+      loose-envify: 1.4.0
 
   ip@2.0.1: {}
 
@@ -8393,6 +8552,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  just-throttle@4.2.0: {}
 
   keyv@4.5.4:
     dependencies:
