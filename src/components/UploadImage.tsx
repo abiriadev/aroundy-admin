@@ -19,25 +19,23 @@ export const UploadImage = () => {
 			)}
 		>
 			<Uploady
-				// destination={{}}
-				multiple
+			// destination={{}}
 			>
 				<UploadPreview
-					PreviewComponent={i => {
-						if (i) setUploaded(true)
-
-						return <img src={i.url} />
-					}}
+				// PreviewComponent={({ url }) => (
+				// 	<img
+				// 		src={url}
+				// 		className="w-full h-full"
+				// 	/>
+				// )}
 				/>
-				{uploaded || (
-					<Zone className="w-full h-full">
-						<UploadButton className="w-full h-full border-0 bg-[#ecfdf7] p-6 flex justify-center items-center">
-							<span className="text-lg">
-								이곳에 파일을 업로드하세요.
-							</span>
-						</UploadButton>
-					</Zone>
-				)}
+				<Zone className="w-full h-full">
+					<UploadButton className="w-full h-full border-0 bg-[#ecfdf7] p-6 flex justify-center items-center">
+						<span className="text-lg">
+							이곳에 파일을 업로드하세요.
+						</span>
+					</UploadButton>
+				</Zone>
 			</Uploady>
 		</div>
 	)
