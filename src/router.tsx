@@ -29,8 +29,44 @@ export const router = createBrowserRouter([
 				),
 			},
 			{
+				path: '/articles/:id',
+				element: (
+					<Grid container spacing={3}>
+						<Grid xs></Grid>
+						<Grid xs={6}>
+							<ArticleForm />
+						</Grid>
+						<Grid xs></Grid>
+					</Grid>
+				),
+			},
+			{
 				path: '/companies',
 				element: <CompaniesPage />,
+			},
+			{
+				path: '/companies/new',
+				element: (
+					<Grid container spacing={3}>
+						<Grid xs></Grid>
+						<Grid xs={6}>
+							<ArticleForm />
+						</Grid>
+						<Grid xs></Grid>
+					</Grid>
+				),
+			},
+			{
+				path: '/companies/:id',
+				element: (
+					<Grid container spacing={3}>
+						<Grid xs></Grid>
+						<Grid xs={6}>
+							<ArticleForm />
+						</Grid>
+						<Grid xs></Grid>
+					</Grid>
+				),
 			},
 			{
 				path: '/accounts',
