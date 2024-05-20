@@ -11,6 +11,7 @@ import {
 import { UploadImage } from './UploadImage'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 interface CompanyCreate {
 	name: string
@@ -60,10 +61,18 @@ export const CompanyForm = () => {
 					<Button
 						variant="outlined"
 						className="flex-1"
+						component={Link}
+						to="/companies"
 					>
 						취소
 					</Button>
-					<Button className="flex-1">등록</Button>
+					<Button
+						className="flex-1"
+						component={Link}
+						to="/companies"
+					>
+						등록
+					</Button>
 				</Stack>
 			</Stack>
 		</form>
