@@ -6,6 +6,8 @@ import { Layout } from './pages/Layout'
 import { LoginPage } from './pages/LoginPage'
 import { ArticleForm } from './components/ArticleForm'
 import { Grid } from '@mui/joy'
+import { CompanyForm } from './components/CompanyForm'
+import { NewArticlePage } from './pages/NewArticlePage'
 
 export const router = createBrowserRouter([
 	{
@@ -18,27 +20,11 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/articles/new',
-				element: (
-					<Grid container spacing={3}>
-						<Grid xs></Grid>
-						<Grid xs={6}>
-							<ArticleForm />
-						</Grid>
-						<Grid xs></Grid>
-					</Grid>
-				),
+				element: <NewArticlePage />,
 			},
 			{
 				path: '/articles/:id',
-				element: (
-					<Grid container spacing={3}>
-						<Grid xs></Grid>
-						<Grid xs={6}>
-							<ArticleForm />
-						</Grid>
-						<Grid xs></Grid>
-					</Grid>
-				),
+				element: <NewArticlePage />,
 			},
 			{
 				path: '/companies',
@@ -50,7 +36,7 @@ export const router = createBrowserRouter([
 					<Grid container spacing={3}>
 						<Grid xs></Grid>
 						<Grid xs={6}>
-							<ArticleForm />
+							<CompanyForm />
 						</Grid>
 						<Grid xs></Grid>
 					</Grid>
@@ -62,7 +48,7 @@ export const router = createBrowserRouter([
 					<Grid container spacing={3}>
 						<Grid xs></Grid>
 						<Grid xs={6}>
-							<ArticleForm />
+							<CompanyForm />
 						</Grid>
 						<Grid xs></Grid>
 					</Grid>
