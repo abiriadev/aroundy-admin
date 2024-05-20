@@ -1,7 +1,11 @@
 import { Button, Chip, IconButton, Table } from '@mui/joy'
-import { DeleteOutlineRounded } from '@mui/icons-material'
+import {
+	DeleteOutlineRounded,
+	EditOutlined,
+} from '@mui/icons-material'
 import { companies } from '../mocks/data'
 import { formatDateKo } from '../utils'
+import { Link } from 'react-router-dom'
 
 interface Ads {
 	id: string
@@ -36,6 +40,7 @@ export const ArticleTable = () => {
 			<thead>
 				<tr>
 					<th>카테고리</th>
+					<th>기업 로고</th>
 					<th>기업</th>
 					<th>채널</th>
 					<th>타이틀</th>
@@ -48,7 +53,8 @@ export const ArticleTable = () => {
 					<th>이벤트 시작일</th>
 					<th>이벤트 종료일</th>
 					<th>링크</th>
-					<th></th>
+					<th>수정</th>
+					<th>삭제</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -78,11 +84,13 @@ export const ArticleTable = () => {
 						>
 							<td>{category}</td>
 							<td>
+								<img
+									src={company.logo}
+									height={20}
+								/>
+							</td>
+							<td>
 								<div className="flex items-center gap-2">
-									<img
-										src={company.logo}
-										height={20}
-									/>
 									<span>
 										{company.name}
 									</span>
@@ -93,7 +101,11 @@ export const ArticleTable = () => {
 									{type}
 								</Chip>
 							</td>
-							<td>{title}</td>
+							<td>
+								<Link to="/edit">
+									{title}
+								</Link>
+							</td>
 							<td>{location}</td>
 							<td>
 								{tags.map(
@@ -118,6 +130,11 @@ export const ArticleTable = () => {
 							<td>{formatDateKo(endsAt)}</td>
 							<td>
 								<a href={link}>이동</a>
+							</td>
+							<td>
+								<IconButton color="primary">
+									<EditOutlined />
+								</IconButton>
 							</td>
 							<td>
 								<IconButton color="danger">
@@ -331,7 +348,7 @@ const data: Ads[] = [
 		category: '팝업스토어',
 		feeds: [],
 		caption: '',
-		type: 'online',
+		type: 'offline',
 		location: '서울특별시 강남구 테헤란로44길',
 		contact: '010-1234-5678',
 		company: companies[8],
