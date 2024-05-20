@@ -5,6 +5,7 @@ import { AccountsPage } from './pages/AccountsPage'
 import { Layout } from './pages/Layout'
 import { LoginPage } from './pages/LoginPage'
 import { ArticleForm } from './components/ArticleForm'
+import { Grid } from '@mui/joy'
 
 export const router = createBrowserRouter([
 	{
@@ -17,7 +18,15 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/articles/new',
-				element: <ArticleForm />,
+				element: (
+					<Grid container spacing={3}>
+						<Grid xs></Grid>
+						<Grid xs={6}>
+							<ArticleForm />
+						</Grid>
+						<Grid xs></Grid>
+					</Grid>
+				),
 			},
 			{
 				path: '/companies',
