@@ -2,8 +2,6 @@ import {
 	FormControl,
 	FormLabel,
 	Input,
-	Box,
-	ButtonGroup,
 	Button,
 	Stack,
 } from '@mui/joy'
@@ -14,6 +12,7 @@ import { DateTimePicker } from '@mui/x-date-pickers'
 import { EventChannel } from './EventChannel'
 import { SelectCategories } from './SelectCategories'
 import { UploadImage } from './UploadImage'
+import { Link } from 'react-router-dom'
 
 export const ArticleForm = () => {
 	return (
@@ -88,10 +87,18 @@ export const ArticleForm = () => {
 					<Button
 						variant="outlined"
 						className="flex-1"
+						component={Link}
+						to="/"
 					>
 						취소
 					</Button>
-					<Button className="flex-1">등록</Button>
+					<Button
+						className="flex-1"
+						component={Link}
+						to="/"
+					>
+						등록
+					</Button>
 				</Stack>
 			</Stack>
 		</form>
