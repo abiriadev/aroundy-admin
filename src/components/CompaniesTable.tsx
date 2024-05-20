@@ -5,6 +5,7 @@ import {
 	DeleteOutlineRounded,
 	EditOutlined,
 } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 export const CompaniesTable = () => {
 	const [companies, setCompanies] = useState<
@@ -30,7 +31,7 @@ export const CompaniesTable = () => {
 				</tr>
 			</thead>
 			<tbody>
-				{companies.map(({ name, logo }, i) => (
+				{companies.map(({ id, name, logo }, i) => (
 					<tr key={i}>
 						<td>{name}</td>
 						<td>
@@ -41,11 +42,13 @@ export const CompaniesTable = () => {
 								활성
 							</Chip>
 						</td>
-						<td>
-							<IconButton color="primary">
-								<EditOutlined />
-							</IconButton>
-						</td>
+						<IconButton
+							color="primary"
+							component={Link}
+							to={`/articles/${id}`}
+						>
+							<EditOutlined />
+						</IconButton>
 						<td>
 							<IconButton color="danger">
 								<DeleteOutlineRounded />

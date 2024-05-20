@@ -101,11 +101,7 @@ export const ArticleTable = () => {
 									{type}
 								</Chip>
 							</td>
-							<td>
-								<Link to="/edit">
-									{title}
-								</Link>
-							</td>
+							<td>{title}</td>
 							<td>{location}</td>
 							<td>
 								{tags.map(
@@ -132,7 +128,11 @@ export const ArticleTable = () => {
 								<a href={link}>이동</a>
 							</td>
 							<td>
-								<IconButton color="primary">
+								<IconButton
+									color="primary"
+									component={Link}
+									to={`/articles/${id}`}
+								>
 									<EditOutlined />
 								</IconButton>
 							</td>
