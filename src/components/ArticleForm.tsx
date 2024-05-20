@@ -18,88 +18,69 @@ export const ArticleForm = () => {
 	return (
 		<form>
 			<Stack gap={3}>
-				<Box
-					display="grid"
-					gridTemplateColumns="auto 1fr"
-					gap={2}
-					// className="items-start"
-				>
+				<FormControl>
 					<FormLabel>타이틀</FormLabel>
-					<FormControl>
-						<Input placeholder="아티클 제목" />
-					</FormControl>
-
+					<Input placeholder="아티클 제목" />
+				</FormControl>
+				<FormControl>
 					<FormLabel>카테고리</FormLabel>
-					<FormControl>
-						<SelectCategories />
-					</FormControl>
-
+					<SelectCategories />
+				</FormControl>
+				<FormControl>
 					<FormLabel>기업</FormLabel>
-					<FormControl>
-						<SelectCompanies />
-					</FormControl>
-
+					<SelectCompanies />
+				</FormControl>
+				<FormControl>
 					<FormLabel>피드</FormLabel>
-					<FormControl>
-						<Input
-							placeholder="사진"
-							type="file"
-							slotProps={{
-								input: {
-									multiple: true,
-								},
-							}}
-						/>
-					</FormControl>
-
+					<Input
+						placeholder="사진"
+						type="file"
+						slotProps={{
+							input: {
+								multiple: true,
+							},
+						}}
+					/>
+				</FormControl>
+				<FormControl>
 					<FormLabel>캡션</FormLabel>
-					<FormControl>
-						<InputCaption />
-					</FormControl>
-
+					<InputCaption />
+				</FormControl>
+				<FormControl>
 					<FormLabel>이벤트 유형</FormLabel>
-					<FormControl>
-						<EventChannel />
-					</FormControl>
-
+					<EventChannel />
+				</FormControl>
+				<FormControl>
 					<FormLabel>주소</FormLabel>
-					<FormControl>
-						<Input placeholder="서울특별시 강남구 테헤란로44길" />
-					</FormControl>
-
+					<Input placeholder="서울특별시 강남구 테헤란로44길" />
+				</FormControl>
+				<FormControl>
 					<FormLabel>연락처</FormLabel>
-					<FormControl>
-						<Input
-							placeholder="010-1234-5678"
-							type="tel"
-						/>
-					</FormControl>
-
+					<Input
+						placeholder="010-1234-5678"
+						type="tel"
+					/>
+				</FormControl>
+				<FormControl>
 					<FormLabel>게시일</FormLabel>
-					<FormControl>
-						<DateTimePicker />
-					</FormControl>
-
+					<DateTimePicker />
+				</FormControl>
+				<FormControl>
 					<FormLabel>이벤트 시작일</FormLabel>
-					<FormControl>
-						<DateTimePicker />
-					</FormControl>
-
+					<DateTimePicker />
+				</FormControl>
+				<FormControl>
 					<FormLabel>이벤트 종료일</FormLabel>
-					<FormControl>
-						<DateTimePicker />
-					</FormControl>
-
+					<DateTimePicker />
+				</FormControl>
+				<FormControl>
 					<FormLabel>출처 링크</FormLabel>
-					<FormControl>
-						<Input placeholder="https://example.com" />
-					</FormControl>
-
+					<Input placeholder="https://example.com" />
+				</FormControl>
+				<FormControl>
 					<FormLabel>태그</FormLabel>
-					<FormControl>
-						<SelectTags />
-					</FormControl>
-				</Box>
+					<SelectTags />
+				</FormControl>
 				<Stack direction="row" gap={2}>
 					<Button
 						variant="outlined"
