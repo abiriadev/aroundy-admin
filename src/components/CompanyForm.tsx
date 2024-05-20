@@ -5,6 +5,8 @@ import {
 	Box,
 	Button,
 	Stack,
+	RadioGroup,
+	Radio,
 } from '@mui/joy'
 
 export const CompanyForm = () => {
@@ -15,6 +17,22 @@ export const CompanyForm = () => {
 					<FormControl>
 						<FormLabel>기업명</FormLabel>
 						<Input placeholder="ex) 주식회사 세종대왕" />
+					</FormControl>
+					<FormControl>
+						<FormLabel>상태</FormLabel>
+						<RadioGroup
+							defaultValue="active"
+							orientation="horizontal"
+						>
+							<Radio
+								value="active"
+								label="활성화"
+							/>
+							<Radio
+								value="inactive"
+								label="비활성화"
+							/>
+						</RadioGroup>
 					</FormControl>
 				</Box>
 				<Stack direction="row" gap={2}>
