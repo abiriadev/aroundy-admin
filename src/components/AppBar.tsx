@@ -10,8 +10,8 @@ import { NavLink, Link as RrdLink } from 'react-router-dom'
 import Logo from '../assets/primary.svg?react'
 
 const menus = [
-	{ name: '컨텐츠관리', path: '/' },
-	{ name: '회사관리', path: '/companies' },
+	{ name: '포스트 관리', path: '/' },
+	{ name: '기업 관리', path: '/companies' },
 	{ name: '회원', path: '/accounts' },
 ]
 
