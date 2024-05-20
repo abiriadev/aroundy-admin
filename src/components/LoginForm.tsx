@@ -42,13 +42,12 @@ export const LoginForm = () => {
 							size="sm"
 							label="로그인 상태 유지"
 						/>
-						<Button className="mt-4">
-							<Link
-								to="/"
-								className="no-underline text-inherit"
-							>
-								로그인
-							</Link>
+						<Button
+							className="mt-4"
+							component={Link}
+							to="/"
+						>
+							로그인
 						</Button>
 					</Stack>
 				</form>
