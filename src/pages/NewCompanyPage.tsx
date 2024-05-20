@@ -1,7 +1,7 @@
 import { Grid } from '@mui/joy'
 import { CompanyForm } from '../components/CompanyForm'
 
-export const NewArticlePage = () => {
+export const NewCompanyPage = () => {
 	return (
 		<Grid container spacing={3}>
 			<Grid xs></Grid>
