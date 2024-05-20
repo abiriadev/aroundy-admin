@@ -23,14 +23,16 @@ export const ArticleForm = () => {
 					<FormLabel>타이틀</FormLabel>
 					<Input placeholder="아티클 제목" />
 				</FormControl>
-				<FormControl>
-					<FormLabel>카테고리</FormLabel>
-					<SelectCategories />
-				</FormControl>
-				<FormControl>
-					<FormLabel>기업</FormLabel>
-					<SelectCompanies />
-				</FormControl>
+				<Stack direction="row" gap={2}>
+					<FormControl className="flex-1">
+						<FormLabel>카테고리</FormLabel>
+						<SelectCategories />
+					</FormControl>
+					<FormControl className="flex-1">
+						<FormLabel>기업</FormLabel>
+						<SelectCompanies />
+					</FormControl>
+				</Stack>
 				<FormControl>
 					<FormLabel>피드</FormLabel>
 					<UploadImage />
@@ -43,29 +45,33 @@ export const ArticleForm = () => {
 					<FormLabel>이벤트 유형</FormLabel>
 					<EventChannel />
 				</FormControl>
-				<FormControl>
-					<FormLabel>주소</FormLabel>
-					<Input placeholder="서울특별시 강남구 테헤란로44길" />
-				</FormControl>
-				<FormControl>
-					<FormLabel>연락처</FormLabel>
-					<Input
-						placeholder="010-1234-5678"
-						type="tel"
-					/>
-				</FormControl>
+				<Stack direction="row" gap={2}>
+					<FormControl className="flex-1">
+						<FormLabel>주소</FormLabel>
+						<Input placeholder="서울특별시 강남구 테헤란로44길" />
+					</FormControl>
+					<FormControl className="flex-1">
+						<FormLabel>연락처</FormLabel>
+						<Input
+							placeholder="010-1234-5678"
+							type="tel"
+						/>
+					</FormControl>
+				</Stack>
 				<FormControl>
 					<FormLabel>게시일</FormLabel>
 					<DateTimePicker />
 				</FormControl>
-				<FormControl>
-					<FormLabel>이벤트 시작일</FormLabel>
-					<DateTimePicker />
-				</FormControl>
-				<FormControl>
-					<FormLabel>이벤트 종료일</FormLabel>
-					<DateTimePicker />
-				</FormControl>
+				<Stack direction="row" gap={2}>
+					<FormControl className="flex-1">
+						<FormLabel>이벤트 시작일</FormLabel>
+						<DateTimePicker />
+					</FormControl>
+					<FormControl className="flex-1">
+						<FormLabel>이벤트 종료일</FormLabel>
+						<DateTimePicker />
+					</FormControl>
+				</Stack>
 				<FormControl>
 					<FormLabel>출처 링크</FormLabel>
 					<Input placeholder="https://example.com" />
