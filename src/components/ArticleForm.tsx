@@ -13,6 +13,7 @@ import { SelectTags } from './SelectTags'
 import { DateTimePicker } from '@mui/x-date-pickers'
 import { EventChannel } from './EventChannel'
 import { SelectCategories } from './SelectCategories'
+import { UploadImage } from './UploadImage'
 
 export const ArticleForm = () => {
 	return (
@@ -32,15 +33,7 @@ export const ArticleForm = () => {
 				</FormControl>
 				<FormControl>
 					<FormLabel>피드</FormLabel>
-					<Input
-						placeholder="사진"
-						type="file"
-						slotProps={{
-							input: {
-								multiple: true,
-							},
-						}}
-					/>
+					<UploadImage />
 				</FormControl>
 				<FormControl>
 					<FormLabel>캡션</FormLabel>
