@@ -1,3 +1,5 @@
+import { companies } from './mocks/data.ts'
+
 export interface Company {
 	id: string
 	name: string
@@ -9,9 +11,10 @@ export interface Paginate<T> {
 }
 
 export const fetchCompanies = async () => {
-	return (
-		(await (
-			await fetch('/api/companies')
-		).json()) as Paginate<Company>
-	).items
+	// return (
+	// 	(await (
+	// 		await fetch('/api/companies')
+	// 	).json()) as Paginate<Company>
+	// ).items
+	return companies
 }
