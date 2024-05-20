@@ -13,12 +13,14 @@ import {
 	SearchRounded,
 } from '@mui/icons-material'
 import { PropsWithChildren } from 'react'
+import { Link } from 'react-router-dom'
 
 export interface InfoTableProps extends PropsWithChildren {
 	total?: number
 	start?: number
 	end?: number
 	current?: number
+	buttonLink?: string
 }
 
 export const InfoTable = ({
@@ -26,6 +28,7 @@ export const InfoTable = ({
 	start,
 	end,
 	current,
+	buttonLink,
 	children,
 }: InfoTableProps) => {
 	return (
@@ -52,9 +55,15 @@ export const InfoTable = ({
 						startDecorator={<SearchRounded />}
 						className="ml-auto"
 					></Input>
-					<Button startDecorator={<AddRounded />}>
-						추가
-					</Button>
+					{buttonLink && (
+						<Button
+							startDecorator={<AddRounded />}
+							component={Link}
+							to={buttonLink}
+						>
+							추가
+						</Button>
+					)}
 				</Stack>
 				<CardContent>{children}</CardContent>
 			</Card>
