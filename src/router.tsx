@@ -8,6 +8,7 @@ import { ArticleForm } from './components/ArticleForm'
 import { Grid } from '@mui/joy'
 import { CompanyForm } from './components/CompanyForm'
 import { NewArticlePage } from './pages/NewArticlePage'
+import { NewCompanyPage } from './pages/NewCompanyPage'
 
 export const router = createBrowserRouter([
 	{
@@ -32,27 +33,11 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/companies/new',
-				element: (
-					<Grid container spacing={3}>
-						<Grid xs></Grid>
-						<Grid xs={6}>
-							<CompanyForm />
-						</Grid>
-						<Grid xs></Grid>
-					</Grid>
-				),
+				element: <NewCompanyPage />,
 			},
 			{
 				path: '/companies/:id',
-				element: (
-					<Grid container spacing={3}>
-						<Grid xs></Grid>
-						<Grid xs={6}>
-							<CompanyForm />
-						</Grid>
-						<Grid xs></Grid>
-					</Grid>
-				),
+				element: <NewCompanyPage />,
 			},
 			{
 				path: '/accounts',
