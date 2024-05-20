@@ -52,7 +52,11 @@ export const CompanyForm = () => {
 						/>
 					</RadioGroup>
 				</FormControl>
-				<Stack direction="row" gap={2}>
+				<Stack
+					direction="row"
+					gap={2}
+					className="mt-8"
+				>
 					<Button
 						variant="outlined"
 						className="flex-1"

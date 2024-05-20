@@ -74,7 +74,11 @@ export const ArticleForm = () => {
 					<FormLabel>태그</FormLabel>
 					<SelectTags />
 				</FormControl>
-				<Stack direction="row" gap={2}>
+				<Stack
+					direction="row"
+					gap={2}
+					className="mt-8"
+				>
 					<Button
 						variant="outlined"
 						className="flex-1"
