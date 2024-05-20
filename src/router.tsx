@@ -4,6 +4,7 @@ import { CompaniesPage } from './pages/CompaniesPage'
 import { AccountsPage } from './pages/AccountsPage'
 import { Layout } from './pages/Layout'
 import { LoginPage } from './pages/LoginPage'
+import { ArticleForm } from './components/ArticleForm'
 
 export const router = createBrowserRouter([
 	{
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: <ArticlesPage />,
+			},
+			{
+				path: '/articles/new',
+				element: <ArticleForm />,
 			},
 			{
 				path: '/companies',
@@ -26,6 +31,6 @@ export const router = createBrowserRouter([
 	},
 	{
 		path: '/login',
-		element: <LoginPage />
-	}
+		element: <LoginPage />,
+	},
 ])
