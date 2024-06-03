@@ -16,6 +16,14 @@ const options = [
 		label: '온/오프라인',
 		value: 'both',
 	},
+	{
+		label: '지점',
+		value: 'branches',
+	},
+	{
+		label: '온라인/지점',
+		value: 'branches2',
+	},
 ]
 
 export const EventChannel = () => {
