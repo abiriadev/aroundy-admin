@@ -22,7 +22,7 @@ const options = [
 	},
 	{
 		label: '온라인/지점',
-		value: 'branches2',
+		value: 'online-branches',
 	},
 ]
 
