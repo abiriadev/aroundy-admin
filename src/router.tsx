@@ -9,6 +9,7 @@ import { Grid } from '@mui/joy'
 import { CompanyForm } from './components/CompanyForm'
 import { NewArticlePage } from './pages/NewArticlePage'
 import { NewCompanyPage } from './pages/NewCompanyPage'
+import { ArticleEditPage } from './pages/ArticleEditPage'
 
 export const router = createBrowserRouter([
 	{
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/articles/:id',
-				element: <NewArticlePage />,
+				element: <ArticleEditPage />,
 			},
 			{
 				path: '/companies',
