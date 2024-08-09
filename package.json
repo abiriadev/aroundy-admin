@@ -25,6 +25,7 @@
 		"@rpldy/upload-paste": "^1.8.1",
 		"@rpldy/upload-preview": "^1.8.1",
 		"@rpldy/uploady": "^1.8.1",
+		"@tanstack/react-query": "^5.51.23",
 		"clsx": "^2.1.1",
 		"date-fns": "^3.6.0",
 		"jotai": "^2.9.2",
